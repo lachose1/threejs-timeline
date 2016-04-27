@@ -99,6 +99,11 @@ video#bgvid {
     top: -10px;
 }
 
+#main-container {
+  position: relative;
+  top: -40px;
+}
+
 #modal-container {
     width: 50%;
     margin: 0 auto;
