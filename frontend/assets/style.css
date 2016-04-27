@@ -83,10 +83,15 @@ video#bgvid {
   border: none;
 }
 
+#intro-message {
+  font-size: 1.5em;
+}
+
 #left-sidebar {
+  text-align: justify;
   position: relative;
   top: 0px;
-  transition: top 0.2s;
+  transition: top 0.15s;
 }
 
 #logo-navbar {
