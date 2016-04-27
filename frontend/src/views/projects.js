@@ -82,7 +82,10 @@ var ProjectsView = Marionette.CompositeView.extend({
         $("#bgvid").addClass("fade-out-1s");
 
         setTimeout(function() {
-            $("#bgvid").append('<source src="assets/video/projects/ozone/' + id + '.mp4" type="video/mp4">');
+            // $("#bgvid").html("");
+            // $("#bgvid").append('<source src="assets/video/projects/ozone/' + id + '.mp4" type="video/mp4">');
+            $("#bgvid source").attr('src', "assets/video/projects/ozone/" + id + ".mp4");
+            $("#bgvid")[0].load();
             $("#bgvid").removeClass("fade-out-1s");
             $("#bgvid").addClass("fade-in-1s");
         }, 1000);

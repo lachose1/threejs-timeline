@@ -73,7 +73,7 @@ function getProjects() {
 						FROM
 							projects
 						ORDER BY
-							date_realized DESC");
+							date_realized ASC");
 
     if(!empty($stmt))
       return $stmt->fetchAll(PDO::FETCH_ASSOC);
