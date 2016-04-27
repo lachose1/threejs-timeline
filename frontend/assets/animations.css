@@ -26,6 +26,13 @@
     -o-animation: fadeout 2s; /* Opera */
 }
 
+.fade-out-1s {
+    animation: fadeout 1s;
+    -moz-animation: fadeout 1s; /* Firefox */
+    -webkit-animation: fadeout 1s; /* Safari and Chrome */
+    -o-animation: fadeout 1s; /* Opera */
+}
+
 .breathing {
   animation: breathing 4s infinite;
   -webkit-animation: breathing 4s infinite;

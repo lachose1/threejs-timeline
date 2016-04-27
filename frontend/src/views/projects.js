@@ -53,6 +53,7 @@ var ProjectsView = Marionette.CompositeView.extend({
     },
 
     handleProjectClicked: function(model) {
+        this.fadeoutItem($("#space"));
         // console.log(model);
         var html = "<div class='fade-in-2s' id='project-container'>";
         html += "<h2>" + model.get("project_name") + "</h2>";
@@ -68,6 +69,24 @@ var ProjectsView = Marionette.CompositeView.extend({
             imgHtml += "<img width='" + imgWidth + "px' src='" + model.get("image_url") + "image" + i + model.get("image_extension") + "' alt='image'/>";
         }
         $("#project-container").append(imgHtml);
+        this.changeVideo(model.get("id"));
+    },
+
+    fadeoutItem: function(jquerySelector) {
+        $(jquerySelector).addClass("fade-out-2s");
+        setTimeout(function() { $(jquerySelector).remove(); }, 2000);
+    },
+
+    changeVideo: function(id) {
+        $("#bgvid").removeClass("fade-in-1s");
+        $("#bgvid").addClass("fade-out-1s");
+
+        setTimeout(function() {
+            $("#bgvid").append('<source src="assets/video/projects/ozone/' + id + '.mp4" type="video/mp4">');
+            $("#bgvid").removeClass("fade-out-1s");
+            $("#bgvid").addClass("fade-in-1s");
+        }, 1000);
+
     }
 });
 
