@@ -44,6 +44,9 @@ var ProjectsView = Marionette.CompositeView.extend({
     },
 
     onRender: function() {
+        $(document).scroll(function() {
+            $("#left-sidebar").css({top: $(this).scrollTop()});
+        });
         // this.sidebar.show(this.mainView);
         // this.rightContainer.show(this.rightContent);
         // this.famocoPreview.show(new FamocoPreviewView({collection: this.collection, pageType: this.pageType}));

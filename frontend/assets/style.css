@@ -65,6 +65,7 @@ video#bgvid {
   background: none;
   color: rgba(255, 255, 255, 0.5);
   border: none;
+  /*height: 75px;*/
 }
 
 .btn-project a:hover {
@@ -80,6 +81,12 @@ video#bgvid {
 .btn-project a:active, .btn-project a:visited, .btn-project a:link {
   background: none;
   border: none;
+}
+
+#left-sidebar {
+  position: relative;
+  top: 0px;
+  transition: top 0.2s;
 }
 
 #logo-navbar {
@@ -143,7 +150,7 @@ video#bgvid {
 /* Custom Boostrap */
 
 .nav {
-  height: 100px;
+  height: 75px;
   padding-top: 10px;
 }
 
@@ -158,6 +165,11 @@ video#bgvid {
 
 .navbar-default .navbar-brand {
   color: white;
+  /*border-right: 0.1em solid rgba(255, 255, 255, 0.25);*/
+}
+
+#navbar-right .navbar-brand {
+  font-size: 12px;
   /*border-right: 0.1em solid rgba(255, 255, 255, 0.25);*/
 }
 
